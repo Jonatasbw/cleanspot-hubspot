@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "env": {
+    "HUBSPOT_CLIENT_ID": "@hubspot_client_id",
+    "HUBSPOT_CLIENT_SECRET": "@hubspot_client_secret",
+    "FIREBASE_PROJECT_ID": "@firebase_project_id",
+    "FIREBASE_PRIVATE_KEY": "@firebase_private_key",
+    "FIREBASE_CLIENT_EMAIL": "@firebase_client_email",
+    "STRIPE_SECRET_KEY": "@stripe_secret_key",
+    "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret"
+  },
+  "crons": [
+    {
+      "path": "/api/auto-heal",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}
