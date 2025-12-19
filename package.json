@@ -1,0 +1,20 @@
+{
+  "name": "cleanspot-hubspot",
+  "version": "1.0.0",
+  "description": "Data Integrity Insurance for HubSpot",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@hubspot/api-client": "^11.0.0",
+    "axios": "^1.6.0",
+    "crypto-js": "^4.2.0",
+    "firebase-admin": "^12.0.0",
+    "stripe": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
