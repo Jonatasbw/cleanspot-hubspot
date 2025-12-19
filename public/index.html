@@ -66,4 +66,125 @@
         <h4 class="text-xl font-bold mb-3">Auto-Healing</h4>
         <p class="text-gray-600">
           Weekly automatic cleanup. High-confidence duplicates merged automatically.
-        </p
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+          <span class="text-2xl">📊</span>
+        </div>
+        <h4 class="text-xl font-bold mb-3">Health Score</h4>
+        <p class="text-gray-600">
+          Track your CRM's data integrity over time. See improvement every week.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12">Simple, Transparent Pricing</h3>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h4 class="text-2xl font-bold mb-2">Protection</h4>
+          <p class="text-4xl font-bold mb-4">$39<span class="text-lg text-gray-600">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Up to 10,000 contacts</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Weekly auto-cleanup</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Real-time detection</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Health monitoring</span>
+            </li>
+          </ul>
+          <button class="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition">
+            Choose Plan
+          </button>
+        </div>
+
+        <div class="border-2 border-blue-600 rounded-lg p-8 relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </div>
+          <h4 class="text-2xl font-bold mb-2">Premium Protection</h4>
+          <p class="text-4xl font-bold mb-4">$99<span class="text-lg text-gray-600">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Up to 100,000 contacts</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Daily auto-cleanup</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Instant auto-merge</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Priority support</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <span>Custom merge rules</span>
+            </li>
+          </ul>
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+            Choose Plan
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Install CTA -->
+  <section id="install" class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h3 class="text-4xl font-bold mb-6">Ready to clean your HubSpot?</h3>
+    <p class="text-xl text-gray-600 mb-8">Takes 2 minutes to install. See results immediately.</p>
+    
+    <button 
+      onclick="installCleanSpot()"
+      class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
+    >
+      Install CleanSpot Now
+    </button>
+    
+    <p class="text-sm text-gray-500 mt-4">3x cheaper than competitors. Cancel anytime.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2024 CleanSpot. Data Integrity Insurance for HubSpot.</p>
+    </div>
+  </footer>
+
+  <script>
+    function installCleanSpot() {
+      // Pegar CLIENT_ID do HubSpot (você vai adicionar isso depois)
+      const clientId = 'YOUR_HUBSPOT_CLIENT_ID'; // TODO: Substituir
+      const redirectUri = window.location.origin + '/api/oauth';
+      const scope = 'crm.objects.contacts.read crm.objects.contacts.write oauth';
+      
+      const hubspotAuthUrl = `https://app.hubspot.com/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}`;
+      
+      window.location.href = hubspotAuthUrl;
+    }
+  </script>
+
+</body>
+</html>
