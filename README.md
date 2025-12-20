@@ -9,3 +9,5 @@ Data Integrity Insurance for HubSpot
 - Real-time duplicate detection
 - Auto-healing cleanup
 - Health score monitoring
+
+## Deploy test
